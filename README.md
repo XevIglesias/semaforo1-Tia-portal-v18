@@ -119,4 +119,6 @@ La lógica se implementa en el **OB1** en LAD y se organiza conceptualmente en:
 - Acción: activar `Marcha (I0.0)`.
 - Esperado: entra en **E1** y se enciende `L_VERDE (Q0.0)`.
 
+Nota: Proyecto basado en un ejercicio didáctico visto en clase. Implementación y documentación realizadas por mí.
+
 ###
