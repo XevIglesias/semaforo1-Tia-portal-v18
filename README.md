@@ -30,7 +30,7 @@ Implementa un **semáforo de 3 luces** usando una **máquina de estados** de 4 e
 - **Naranja:** 3 s  
 - **Rojo:** 20 s  
 
-> Los temporizadores se implementan en el PLC (en el vídeo se menciona TP, temporizador de impulsos).
+> Los temporizadores se implementan en el PLC (son TP, temporizador de impulsos).
 
 ---
 
