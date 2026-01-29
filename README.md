@@ -44,7 +44,7 @@ El control se diseñó primero con un **GRAFCET** y luego se implementó en LAD.
 - **E3 (Rojo):** se activa `LROJO` durante 20 s.
 - Al finalizar la etapa **E3**, el sistema vuelve a **E0** (reposo).
 
-Diagrama: ver `docs/01_grafcet.png`.
+Diagrama: ver `docs/01_grafcet.pdf`.
 
 ---
 
@@ -82,7 +82,7 @@ Diagrama: ver `docs/01_grafcet.png`.
 | `Always_True` | `M100.2` | BOOL | Siempre TRUE |
 | `Always_False` | `M100.3` | BOOL | Siempre FALSE |
 
-Captura de tags: ver `docs/02_tags.png`.
+Captura de tags: ver `docs/02_tags.pdf`.
 
 ---
 
@@ -101,13 +101,14 @@ La lógica se implementa en el **OB1** en LAD y se organiza conceptualmente en:
    - `E2` activa `L_NARANJA`
    - `E3` activa `LROJO`
 
-Capturas:
-- Etapas/transiciones: `docs/03_ob1_etapas.png`
-- Temporizadores: `docs/04_ob1_temporizadores.png`
-- Salidas: `docs/05_ob1_salidas.png`
-
----
-
+## Prueba rápida
+1. Activar `Marcha (I0.0)`.
+2. Ver secuencia:
+   - Verde `Q0.0` durante 45 s
+   - Naranja `Q0.1` durante 3 s
+   - Rojo `Q0.2` durante 20 s
+3. `Paro (I0.1)` fuerza retorno a `E0 (M0.0)`.
+   
 ## 7) Simulación y plan de pruebas (Test Plan)
 
 ### Prueba 1 — Arranque en frío (First Scan)
