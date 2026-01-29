@@ -39,9 +39,9 @@ El control se diseñó primero con un **GRAFCET** y luego se implementó en LAD.
 
 **Etapas**
 - **E0 (Reposo):** espera la orden de Marcha.
-- **E1 (Verde):** se activa `L_Verde` durante 45 s.
-- **E2 (Naranja):** se activa `L_Naranja` durante 3 s.
-- **E3 (Rojo):** se activa `L_Rojo` durante 20 s.
+- **E1 (Verde):** se activa `L_VERDE` durante 45 s.
+- **E2 (Naranja):** se activa `L_NARANJA` durante 3 s.
+- **E3 (Rojo):** se activa `LROJO` durante 20 s.
 - Al finalizar la etapa **E3**, el sistema vuelve a **E0** (reposo).
 
 Diagrama: ver `docs/01_grafcet.png`.
@@ -69,9 +69,9 @@ Diagrama: ver `docs/01_grafcet.png`.
 ### Salidas (Outputs)
 | Tag | Dirección | Tipo | Descripción |
 |---|---:|---|---|
-| `L_Verde` | `Q0.0` | BOOL | Luz verde |
-| `L_Naranja` | `Q0.1` | BOOL | Luz naranja |
-| `L_Rojo` | `Q0.2` | BOOL | Luz roja |
+| `L_VERDE` | `Q0.0` | BOOL | Luz verde |
+| `L_NARANJA` | `Q0.1` | BOOL | Luz naranja |
+| `LROJO` | `Q0.2` | BOOL | Luz roja |
 
 ### System Memory (bits)
 | Tag | Dirección | Tipo | Descripción |
@@ -97,9 +97,9 @@ La lógica se implementa en el **OB1** en LAD y se organiza conceptualmente en:
      - Estado de la etapa actual/anterior
 
 2. **Red(es) de acciones (salidas)**
-   - `E1` activa `L_Verde`
-   - `E2` activa `L_Naranja`
-   - `E3` activa `L_Rojo`
+   - `E1` activa `L_VERDE`
+   - `E2` activa `L_NARANJA`
+   - `E3` activa `LROJO`
 
 Capturas:
 - Etapas/transiciones: `docs/03_ob1_etapas.png`
@@ -116,6 +116,6 @@ Capturas:
 
 ### Prueba 2 — Inicio de ciclo (Marcha)
 - Acción: activar `Marcha (I0.0)`.
-- Esperado: entra en **E1** y se enciende `L_Verde (Q0.0)`.
+- Esperado: entra en **E1** y se enciende `L_VERDE (Q0.0)`.
 
 ###
